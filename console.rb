@@ -2,6 +2,8 @@ require('pry-byebug')
 require_relative('./models/Artist.rb')
 require_relative('./models/Album.rb')
 
+Artist.delete_all()
+
 artist1 = Artist.new(
   {
     'name' => 'Cat Choir',
