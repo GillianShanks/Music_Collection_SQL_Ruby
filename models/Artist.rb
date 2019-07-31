@@ -19,12 +19,13 @@ class Artist
 
   def self.all()
     sql = "SELECT * FROM artists"
-    return SqlRunner.run(sql)
+    artists_array = SqlRunner.run(sql)
+    return artists_array.map{|artist| Artist.new(artist)}
   end
 
   def self.delete_all()
     sql = "DELETE FROM artists"
     SqlRunner.run(sql)
   end
-  
+
 end
