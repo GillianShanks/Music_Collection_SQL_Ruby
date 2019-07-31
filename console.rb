@@ -1,8 +1,10 @@
 require('pry-byebug')
+require_relative('./models/Artist.rb')
+require_relative('./models/Album.rb')
 
 artist1 = Artist.new(
   {
-    'name' => 'Cat's Choir,
+    'name' => 'Cat Choir',
   }
 )
 
@@ -15,14 +17,14 @@ artist2 = Artist.new(
 album1 = Album.new(
   {
     'title' => 'Meow Meow',
-    'genre' => 'pop',
+    'genre' => 'Pop',
     'artist_id'=> artist1.id
   }
 )
 
 album2 = Album.new(
   {
-    'title' => 'No Rainbows'
+    'title' => 'No Rainbows',
     'genre' => 'Metal',
     'artist_id' => artist2.id
   }
