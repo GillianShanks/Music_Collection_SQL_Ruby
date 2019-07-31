@@ -48,6 +48,11 @@ album1.save()
 album2.save()
 album3.save()
 
+artist1.name = 'Cat Cacophony'
+artist1.update()
+
+album1.genre = 'Rock'
+album1.update()
 
 binding.pry
 nil
