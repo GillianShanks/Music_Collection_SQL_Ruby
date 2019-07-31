@@ -2,6 +2,7 @@ require('pry-byebug')
 require_relative('./models/Artist.rb')
 require_relative('./models/Album.rb')
 
+Album.delete_all()
 Artist.delete_all()
 
 artist1 = Artist.new(
