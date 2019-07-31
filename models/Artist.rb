@@ -47,6 +47,18 @@ class Artist
     sql = "DELETE FROM artists WHERE id = $1"
     values = [@id]
 
-    SqlRunner.run(sql, values)
+    SqlRunner.run(sql, values) #if albums()==nil
   end
+
+  def self.find_by_id(id)
+    sql = "SELECT * FROM artists WHERE id = $1"
+    values = [id]
+
+    artist_hash = SqlRunner.run(sql,values)[0]
+    return Artist.new(artist_hash)
+  end
+
+  # def delete_artist_and_albums()
+  #
+  # end
 end
