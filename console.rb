@@ -14,6 +14,9 @@ artist2 = Artist.new(
 }
 )
 
+artist1.save()
+artist2.save()
+
 album1 = Album.new(
   {
     'title' => 'Meow Meow',
